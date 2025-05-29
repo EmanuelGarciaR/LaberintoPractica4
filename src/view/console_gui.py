@@ -247,7 +247,7 @@ def ejecutar_simulacion(laberinto):
         return
     
 def elegir_ataques_random(laberinto):
-    ataques = [laberinto.ubicar_bloqueo, laberinto.ubicar_trampa]
+    ataques = [laberinto.ubicar_bloqueo]
     while ataques:
         accion = random.choice(ataques)
         resultado = accion()

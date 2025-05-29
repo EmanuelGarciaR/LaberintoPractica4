@@ -70,11 +70,9 @@ class Persona:
         # Elimina a la persona de la celda actual
         if self in laberinto.matriz[self.fila][self.columna]:
             laberinto.matriz[self.fila][self.columna].remove(self)
-        # Si la celda queda vacía, vuelve a poner "⬜"
         if not laberinto.matriz[self.fila][self.columna]:
             laberinto.matriz[self.fila][self.columna].append("⬜")
 
-        # Si hay "⬜" en la celda destino, elimínalo antes de agregar la persona
         if "⬜" in laberinto.matriz[fila_nueva][col_nueva]:
             laberinto.matriz[fila_nueva][col_nueva].remove("⬜")
         # Si hay al menos una Persona en la celda destino y tengo movimientos perdidos, recupero uno
